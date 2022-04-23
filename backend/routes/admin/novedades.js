@@ -17,6 +17,10 @@ router.get('/agregar',(req,res,next) => {
     });
 });
 
+router.get('/volver',(req,res,next) =>{
+    res.redirect('/admin/novedades');
+});
+
 router.post('/agregar', async (req,res,next) => {
     try{
      if(req.body.titulo != "" && req.body.subtitulo != "" &&
